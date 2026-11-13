@@ -1,0 +1,92 @@
+// Texts of the secret part (05_TAJNE.md). Merged into T by data/texts.cs.js.
+import { SX, SX_SHARED } from './texts2.js';
+// Kept here so they are not in one list with everything the player reads in menus.
+
+export const SECRET_TEXTS = {
+  enemies: {
+    posel: { name: 'Posel', desc: 'Malý sliz s kapitánskou čepicí. Něco nese.' },
+    srdce_mlhy: { name: 'Srdce mlhy', desc: 'Nepamatuje si, proč sem jde.' },
+    srdicko: { name: 'Úlomek srdce', desc: 'Kus mlhy, který si pamatuje ještě míň.' },
+  },
+  bosses: {
+    srdce_mlhy: { name: 'Srdce mlhy', line: 'Nepamatuje si, proč sem jde.' },
+  },
+  // Second lines of the codex, after the end (P-58).
+  codex2: {
+    sliz: 'Kaluž po dešti, do které kdosi rád skákal.',
+    smejdil: 'Zkratka přes zahradu, kterou už nikdo nechodí.',
+    tlustoch: 'Nedělní oběd u babičky. Všechny naráz.',
+    golden: 'Dobrý nápad těsně před usnutím.',
+    plechac: 'Hračka z půdy. Pořád čeká, až ji někdo natáhne.',
+    dron: 'Papírová vlaštovka, která nikdy nepřistála.',
+    sberac: 'Šuplík plný věcí, které se jednou budou hodit.',
+    felcar: 'Někdo, kdo ti foukal odřené koleno. Tvář už nevidíš, ruce ano.',
+    bahnak: 'Gumáky odložené v předsíni.',
+    bourac: 'Hrad z kostek a ten, kdo ho rád boural.',
+    mlzak: 'Jméno, které máš na jazyku.',
+    rojik: 'Všechna ta „pak to udělám“.',
+    nosic: 'Krabice z posledního stěhování, nikdy nevybalená.',
+    rusicka: 'Rádio naladěné mezi dvě stanice.',
+    balista: 'První prak a jedno rozbité okno.',
+    tunelar: 'Tajná chodba, kterou jste s kamarády nikdy nedokopali.',
+    ucen: 'Ty, když ses něco učil poprvé.',
+    velky_sliz: 'Louže, která byla tenkrát mořem.',
+    valec: 'Parní stroj z pouti.',
+    bahenni_matka: 'Rybník, kde ses učil plavat.',
+    beranidlo: 'Tvrdohlavost. Kdysi ti slušela.',
+    strazce_brany: 'Školník. Znal všechna jména.',
+    kralovna_roje: 'Léto, kdy bylo všechno poprvé.',
+    oblehaci_vez: 'Vynález, který měl změnit svět a skončil v kůlně.',
+    hlubinny_cerv: 'Tma pod postelí.',
+    mistr: 'Ten, kdo tě to všechno naučil.',
+    srdce_mlhy: 'Hugo.',
+  },
+  codexMore: 'V kodexu přibylo pár řádků.',
+  secret: {
+    holdFire: 'Zadržet palbu',
+    holdFireOn: 'Palba zadržena',
+    carries: 'Počkej… ten něco nese.',
+    shouldnt: 'To jsme asi neměli.',
+    letter: 'Dopis',
+    hugo: '…Hugo?',
+    hint1: 'Co to Hugo říkal o signálu…',
+    hint2: 'Tři dlouhá…',
+    knotSignals: 'Knot vylezl na ochoz a dal signál sám.',
+    wreckFound: 'Ve vraku je něco zaklíněného. Ťukni na něj.',
+    chip: 'Na zemi leží malý paměťový čip.',
+    inside: 'Ťukej! Buš klíčem do stěn!',
+    spat: 'Červ Knota vyplivl.',
+    darkKnot: 'Temný Knot',
+    swallowed: 'Červ spolkl Knota!',
+    epilogue: ['Mlha se vrátí. Vždycky se vrací.', 'Ale teď jste na ni dva.', 'A někdo si vzpomněl.'],
+    epilogueKnot: 'A Knot si vzpomněl za oba.',
+    credits: [
+      ['Poslední maják', ''],
+      ['Strážce majáku', 'ty'],
+      ['Údržbář', 'Knot'],
+      ['Ten, kdo se vrátil', 'Hugo'],
+      ['Kočka', 'Micka'],
+      ['Zapomenuté věci', 'všechny, i ty malé'],
+      ['Mlha', 'sama za sebe'],
+    ],
+    creditsEnd: 'Hru vymyslel Michal. Děkujeme, že jsi svítil.',
+    afterEnd: 'Dohráno. Odemkl se nekonečný režim a obtížnost Legenda.',
+    endlessOffer: 'Pokračovat v nekonečném režimu',
+    toTitle: 'Na úvodní obrazovku',
+    skip: 'Přeskočit',
+    hugoLines: [
+      'Dobře jsi to hlídal, Knote. Oba jste.',
+      'Polévka je pořád ve spíži? Výborně.',
+      'Mlha je jen zapomnění. A to se dá vyhrát vzpomínáním.',
+      'Ta čepice? Tu mi dal jeden starý kapitán. Už nevím který. To nevadí.',
+      'Micka si mě pamatovala celou dobu. Kočky nezapomínají, jen dělají, že je to nezajímá.',
+      'Tři dlouhá, jedno krátké. Pamatuj si to. Já už to nezapomenu.',
+      'Kdysi jsem si myslel, že maják svítí pro lodě.',
+      'Klidně si dej další vlnu. Já tu posedím.',
+    ],
+  },
+};
+
+// stage 5: the surprises (texts2.js)
+SECRET_TEXTS.sx = SX;
+for (const [k, v] of Object.entries(SX_SHARED)) SECRET_TEXTS[k] = { ...(SECRET_TEXTS[k] || {}), ...v };
